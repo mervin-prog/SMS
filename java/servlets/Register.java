@@ -1,0 +1,52 @@
+package servlets;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import service.memberService;
+import util.conn;
+
+@WebServlet("/Register")
+public class Register extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	private Connection con=null;
+	private memberService serve;
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	
+		String firstname = request.getParameter("firstname");
+		String lastname=request.getParameter("lastname");
+		String dob=request.getParameter("dob");
+		String gender=request.getParameter("gender");
+		String email = request.getParameter("email");
+		String phone = request.getParameter("phone");
+		String dept=request.getParameter("dept");
+		try {
+			con=conn.Connect();
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		serve=new memberService(con);
+		boolean success=false;
+		try {
+			success = serve.register(firstname, lastname, dob, gender, email, phone, dept);
+			con.close();
+		} 
+		catch (SQLException e) {
+			e.printStackTrace();     
+		}
+		if(success)
+		{
+			response.sendRedirect("students.jsp");
+			return;
+		}
+	}
+}
+
