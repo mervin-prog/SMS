@@ -6,3 +6,15 @@ data from queries. It is based on MVC Pattern.
 ## Screenshots
 
 ![ScreenShot](https://raw.github.com/mervin-prog/SMS/main/Screenshots/login.png)
+
+
+![ScreenShot](https://raw.github.com/mervin-prog/SMS/main/Screenshots/admin.png)
+
+
+![ScreenShot](https://raw.github.com/mervin-prog/SMS/main/Screenshots/student.png)
+
+
+![ScreenShot](https://raw.github.com/mervin-prog/SMS/main/Screenshots/AddStudent.png)
+
+
+![ScreenShot](https://raw.github.com/mervin-prog/SMS/main/Screenshots/list.png)
