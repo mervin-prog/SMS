@@ -17,8 +17,6 @@ data from queries. It is based on MVC Pattern.
 ![ScreenShot](https://raw.github.com/mervin-prog/SMS/main/Screenshots/AddStudent.png)
 
 
-![ScreenShot](https://raw.github.com/mervin-prog/SMS/main/Screenshots/list.png)
-
 ## Installation
 
  This is an example of how you may give instructions on setting up your project locally. To get a local copy in your directory follow these simple steps.
